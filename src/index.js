@@ -3,13 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./routes";
 
-const BrowserRouter = createBrowserRouter()
+const router = createBrowserRouter(routes)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-root.render(
-    <BrowserRouter>
-    <RouterProvider routes={routes} />
-    </BrowserRouter>
-);
+root.render(<RouterProvider router={router} />);
